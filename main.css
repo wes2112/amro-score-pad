@@ -12,14 +12,14 @@ html { font-size: 62.5%;}
     height: 100%;
 }
 .home-container {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 /** This is the header section of home page */
 .home-header h1 {
     color: aliceblue;
-    font-size: 3rem;
+    font-size: 1rem;
     padding: 15px;
     border: 4px solid white;
     background-color: rgba(0, 0, 0, 0.606);
@@ -32,7 +32,7 @@ html { font-size: 62.5%;}
 #bt_1 {
     margin: 20px auto;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1rem;
     text-transform: capitalize;
     color: aliceblue;
     background-color: rgba(4, 4, 75, 0.684);
@@ -50,7 +50,7 @@ h2 {
 }
  /** Container for the coin flip */
 .flip-container {
-    width: 400px;
+    width: 90%;
     height: 340px;
     margin-left: auto;
     margin-right: auto;
@@ -65,7 +65,7 @@ h2 {
  /** this is the flip button */
 #flip {
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1rem;
     text-transform: capitalize;
     border-radius: 15px;
     background-color: rgba(4, 4, 75, 0.684);
@@ -75,8 +75,8 @@ h2 {
  /** This is the coin section */
 #coin {
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: 10rem;
+  height: 10rem;
   margin: 2rem 0rem;
   transform-style: preserve-3d;
 
@@ -109,7 +109,7 @@ h2 {
 }
 
 .tails {
-    background-image: url("images/tail.png");
+  background-image: url("images/tail.png");
   transform: rotateY(-180deg);
 }
 
@@ -132,13 +132,13 @@ h2 {
     padding: 15px;
     letter-spacing: 3px;
     background-color: rgb(20, 2, 139);
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 7rem;
     border: 2px solid aliceblue;
     border-radius: 12px;
 }
 .form-container {
-    width: 400px;
+    width: 90%;
     background-color: rgba(0, 0, 0, 0.658);
     border: 2px solid aliceblue;
     margin-left: auto;
@@ -146,7 +146,7 @@ h2 {
     border-radius: 15px;
 }
 .form-container h2 {
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: aliceblue;
     padding: 10px;
     letter-spacing: 3px;
@@ -156,13 +156,13 @@ h2 {
 #player-names {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
 
 }
 label {
     color: aliceblue;
-    font-size: 2rem;
-    line-height: 5rem;
+    font-size: 1.2rem;
+    line-height: 4rem;
 }
  /** Start game button */
 .sub {
@@ -170,11 +170,11 @@ label {
     padding: 10px;
     background-color: rgb(114, 249, 114);
     border-radius: 15px;
-    font-size: 2.5rem;
+    font-size: 1rem;
 }
 /** Input fields home page */
 input[type=text] {
-    font-size: 2.5rem;
+    font-size: 1rem;
     padding: 5px;
     background-color: beige;
 }
@@ -279,7 +279,7 @@ row_3 {
     .nav-left h3,  
     .nav-right h3,
     .nav-center h3 {
-        font-size: 2.1rem;         
+        font-size: 1rem;         
         padding: 4px 17px;        
         letter-spacing: 3px;
     }
@@ -292,7 +292,7 @@ row_3 {
     .all-btn button {
         width: 7.2vw;        
         padding: 10px;
-        font-size: 2.5rem;
+        font-size: 1rem;
         margin: 5px;
     }    
 }
@@ -302,7 +302,7 @@ row_3 {
     .nav-left h3,  
     .nav-right h3,
     .nav-center h3 {
-        font-size: 1.6rem;         
+        font-size: 1rem;         
         padding: 4px 5px;        
         letter-spacing: 3px;
     }
