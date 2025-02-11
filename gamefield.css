@@ -227,17 +227,18 @@ nav {
   /** players box */
   .players-box {
     margin: 0.5rem;
+    
   }
   .players-box h2 {
     padding: 0.3rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .players-box h3 {
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .players-box h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0.5rem;
   }
   #box_b,
@@ -255,22 +256,20 @@ nav {
   }
   .cell {
     border: 1px solid red;
-    max-width: 70px;
-    min-width: 60px;
-    height: 70px;
+    max-width: 50px;
+    min-width: 50px;
+    height: 50px;
     padding: 0.5rem;
     flex-grow: 1;
   }
   .cell button {
-    font-size: 3rem;
-  }
-  
-  
+    font-size: 1.5rem;
+  } 
 }
 @media screen and (min-width: 401px) and (max-width: 750px) {
   /** nav bar */
   body {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
    /** pop up modal */
   .pop_up {
@@ -282,18 +281,18 @@ nav {
     border: 5px solid var(--basic-water);
   }
   .pop_up h2, .pop_up h3 {
-    font-size: 2rem;
+    font-size: 1rem;
     padding: .5rem 1rem;
     display: block;
   }
   .loss button {
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 0.2rem 1rem;
     margin: 1rem;
   }
   .pop_up button {
-    font-size: 2rem;
-    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    padding: 0.1rem 1rem;
     margin: 1rem;
   }
   nav {
@@ -301,33 +300,33 @@ nav {
   }
   .nav-btn {
     padding: .1rem 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   /** wrapper */
   .wrapper {
     margin: 0.5rem;
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
   }
   .player-b,
   .player-a {
-    width: 100%;
+    width: 80%;
   }
   /** players box */
   .players-box {
     margin: 0.5rem;
   }
   .players-box h2 {
-    font-size: 2rem;
-    padding: 0.3rem;
+    font-size: 1rem;
+    padding: 0.2rem;
   }
   .players-box h3 {
-    padding: 0.5rem;
-    font-size: 2rem;
+    padding: 0.2rem;
+    font-size: 1rem;
   }
   .players-box h4 {
-    padding: 0.5rem;
-    font-size: 1.5rem;
+    padding: 0.2rem;
+    font-size: 1rem;
   }
   #box_b,
   #box_a {
@@ -336,20 +335,20 @@ nav {
   /**frame settings */
   .frame {
     margin: 0.5rem;        
-    padding: .5rem;
+    padding: .3rem;
   }  
   .row {
-    gap: 0.3rem;
+    gap: 0.2rem;
     margin: 0.3rem 0;
   }
   .cell {
     border: 1px solid red;
-    width: 60px;
-    height: 60px;
-    padding: 0.5rem;
+    width: 50px;
+    height: 50px;
+    padding: 0.3rem;
   }
   .cell button {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 751px) and (max-width: 1250px) {
