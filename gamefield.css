@@ -184,7 +184,7 @@ nav {
 
 @media screen and (max-width: 400px) {
   body {
-    overflow: hidden;
+    /**overflow: hidden;*/
   }
   /** pop up modal */
   .pop_up {
@@ -248,11 +248,11 @@ nav {
   /**frame settings */
   .frame {
     margin: 0.5rem;        
-    padding: .5rem;
+    padding: .3rem;
   }  
   .row {
-    gap: .5rem;
-    margin: .5rem 0;
+    gap: .3rem;
+    margin: .3rem 0;
   }
   .cell {
     border: 1px solid red;
@@ -343,12 +343,12 @@ nav {
   }
   .cell {
     border: 1px solid red;
-    width: 50px;
-    height: 50px;
-    padding: 0.3rem;
+    width: 45px;
+    height: 45px;
+    padding: 0.2rem;
   }
   .cell button {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 751px) and (max-width: 1250px) {
