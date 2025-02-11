@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" type="text/css" media="all">
+    
+</head>
+<body class="home-body">
+    <div class="home-container">
+        <div class="home-header">
+        <h1 id="header_h">This is a very basic game score keeper.  For the time being, till 
+            the data base get developed, you will have to remember your scores. I'll
+            try to work out an email system where you can save the scores to both
+            players. Please let me know if there is features you like to see and
+            I'll try to develop them. That goes for the theme as well. In the mean 
+            time I'll work on theme changer and everything else. Enjoy, play good!
+        </h1>
+        <h2><button id="bt_1">Hide / show</button></h2>
+        </div>
+        <div class="players">
+
+        </div>
+        <div class="flip-container">
+            <div id="coin" class=''>
+                <div id="heads" class="heads"></div>
+                <div id="tails" class="tails"></div>
+            </div>
+                <h2><button id="flip">See who breaks!</button></h2>
+                <p>Heads: <span id="headsCount">0</span> Tails: <span id="tailsCount">0</span></p>
+                 <p class="head_tail"><span id="status">??????</span></p>
+        </div>
+        <br>
+        <div class="form-container">
+            <h2>Who's playing today? <br>
+                Who ever is breaking<br> goes 
+                in the first box.
+            </h2><br>
+            <form id="player-names">
+                <label for="player1">Player 1 Name:</label>
+                <input type="text" id="player1" name="player1" required placeholder="Winner of toss">
+                <br><br>
+                <label for="player2">Player 2 Name:</label>
+                <input type="text" id="player2" name="player2" required placeholder="Player 2">
+                <br>
+                <a href="./game-field.html" id="submit" class="sub" type="submit">Start Game</a>
+            </form>
+
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/myScript.js"></script>
+    <script src="./name_handler.js"></script>
+    <script src="./test1.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+
+:root {
+  color: ;
+  --basic-red1: #ffcccc;
+  --basic-red2: #ff7777;
+  --basic-red3: #ff3333;
+  --basic-red9: #ff0000;  
+  --basic-water: #0fffff;
+  --basic-blue1: #0fffaf;
+  --basic-blue5: #7777ff;
+  --basic-blue8: #3333ff;
+  --basic-green1: #aaffdd;
+  --basic-green2: #aaffaa;
+  --basic-green3: #20f903;
+  --basic-green9: #00ff00;
+  --basic-purple1: #ddddff;
+  --basic-purple2: #aaaaff;
+  --basic-pink: #ff00ff;
+  --basic-pink2: #ff00aa;
+  --basic-pink5: #dd00dd;
+  --basic-pink9: #aa00aa;
+  --basic-yellow1: #ffff00;
+  --basic-yellow2: #fff000;
+  --basic-purple9: #58039c;
+  --basic-purple7: #9c08ff;
+  --light-blue: #bae5f8; 
+  --light-yellow: #fafce2;
+  --light-kaki: #ebe8dd; 
+  --light-pink: #f8e8fe;
+
+  --blue-level0: #01ffff;
+  --blue-level1: #00ffe1;
+  --blue-level2: #00ddef;
+  --blue-level3: #00BBFC;
+  --blue-level4: #408de0;
+  --blue-level5: #057dff;
+  --blue-level6: #0000ff;
+  --blue-level7: #2725C9;
+  --blue-level8: #00339b;
+  --blue-level9: #04045b;
+  --green-level0: #4AFFC8;
+  --green-level1: #44ffcc;
+  --green-level2: #00ff01;
+  --green-level3: #04da2b;
+  --green-level6: #3a9a32;
+  --green-level7: #019a34;
+  --green-level9: #026B3E;
+  --green-like2: #00ffa5;
+  --green-like1: #00FBB4;
+  --gold-level1: #fffedb;
+  --gold-level2: #fffba9;
+  --gold-level3: #F5E78C;
+  --gold-level4: #f5df43;
+  --gold-level5: #B0903E;
+  --gold-level6: #9F5E1F;
+  --gold-level7: #843D16;
+  --gold-level8: #401C0D;
+  --orange-level1: #FCC443;
+  --orange-level2: #ffcc00;
+  --orange-level3: #ff8800;
+  --orange-level4: #FC7243;
+  --orange-level5: #ff6600;
+  --pink-level0: #FFA2DE;
+  --pink-level1: #FF49FF;
+  --pink-level2: #ff008c;
+  --pink-level3: #ff00e4;
+  --pink-level4: #ff00fe;
+  --pink-level5: #d400ff;
+  --purple-level1: #fd6ff6;
+  --purple-level5: #8484ff;
+  --purple-level7: #9800ff;
+  --red-level1: #ff1900;
+  --red-level2: #EA2300;
+  --silver-bright1: #FCF5F5;
+  --silver-bright2: #B2BFB8;
+  --silver-dark: #87938F;
+  --silver-dark2: #5C6866;
+  --yellow-level0: #ffff00;
+  --yellow-level1: #d8ff00;
+  --yellow-level2: #b6ff00;
+  --yellow-level3: #fffa00;
+  --yellow-level4: #FFFC10;
+  --yellow-level6: #aaaa08;
+  --wood-lite1: #dab89d;
+  --wood-lite2: #83654d;
+  --wood-dark1: #552e12;
+  --wood-dark2: #401f17;
+  --fire-level1: #f6e51c;
+  --bg-dark: #00000044;
+  --bg-black: #00000080;
+  --bg-blue: #0000ff80;
+  --bg-green: #008000bb;
+  --bg-red: #ff000080;
+  --bg-yellow: #ffff0080;
+  --bg-purple: #80008080;
+  --bg-pink: #ffc0cb80;
+
+  --gradient-black:
+    to right,
+    #000,
+    #222,
+    #555,
+    #555,
+    #222,
+    #000;
+  --gradient-blue:
+    25deg,
+    #2725C9,
+    #06225b,
+    #04045b,
+    #04045b,
+    #072257,
+    #2725C9;
+  --gradient-rainbow-0deg:
+    0deg,
+    #FFA2DE,
+    #EA2300,
+    #57CCFF,
+    #4BE53E,
+    #FF49FF,
+    #FFFC10,
+    #00FBB4,
+    #026B3E,
+    #2725C9;
+  --gradient-rainbow:
+    30deg,
+    #FFA2DE,
+    #EA2300,
+    #57CCFF,
+    #4BE53E,
+    #FF49FF,
+    #FFFC10,
+    #00FBB4,
+    #026B3E,
+    #2725C9;
+  --gradient-wood:
+    to right,
+    #83654d,
+    #552e12,
+    #401C0D,
+    #401C0D,
+    #552e12,
+    #83654d;
+  --text-pink:
+    0 0 5px #FFF,
+    0 0 10px #FFF,
+    0 0 15px #FFF,
+    0 0 20px #f80ae0,
+    0 0 30px #ff18fb,
+    0 0 40px #dc18ff 0 0 55px #dc18ff80,
+    0 0 75px #dc18ff60;
+  --text-blue:
+    0 0 5px #01ffff,
+    0 0 10px#00ffe1,
+    0 0 15px #408de0,
+    0 0 20px #057dff,
+    0 0 30px #a0a0f4,
+    0 0 40px #00ffff,
+    0 0 55px #00ffff80,
+    0 0 75px #00ffff60;
+  --text-fire:
+    0 0 5px #fbf392,
+    0 0 10px #e2cc05,
+    0 0 20px #e26b05,
+    0 0 30px #e26b05,
+    0 0 40px #e2cc05,
+    0 0 55px #e2cc0580,
+    0 0 72px #e2cc0560;
+  --text-green:
+    0 0 5px #FFF,
+    0 0 10px #FFF,
+    0 0 15px #FFF,
+    0 0 20px #49ff18,
+    0 0 30px #49FF18,
+    0 0 40px #49FF18,
+    0 0 55px #49FF18,
+    0 0 75px #49ff18;
+  --text-yellow:
+    0 0 5px #ffff00,
+    0 0 10px #d8ff00,
+    0 0 20px #b6ff00,
+    0 0 30px #aaaa08,
+    0 0 40px #ffff00,
+    0 0 55px #ffff0080,
+    0 0 75px #ffff0060;
+  /**box shadow*/
+  --shadow-green-1 :0 0 10px 10px #2bf814;
+  --shadow-yellow-1: 0 0 10px 10px #e9f911;
+  --shadow-gold-1: 0 0 10px 10px #F5E78C;
+  --shadow-red-1: 0 0 10px 10px #ff0000;
+  --shadow-cyan: 0 0 10px 10px #00ffff;
+  --shadow-blue-1: 0 0 10px 10px #0000ff;
+  --shadow-pink-1: 0 0 10px 10px #de0ad3;
+  --shadow-green:
+    0 0 5px 5px #d7fdd3,
+    0 0 10px 10px #acfca3,
+    0 0 15px 15px #81fb74,
+    0 0 20px 20px #56f944,
+    0 0 25px 25px #2bf814;
+  --shadow-yellow:
+    0 0 5px 5px #f7ff89,
+    0 0 10px 10px #f4ff66,
+    0 0 15px 15px #f2ff42,
+    0 0 20px 20px #f0ff1e,
+    0 0 25px 25px #e9f900;
+  --shadow-gold:
+    0 0 5px 5px #fffedb,
+    0 0 10px 10px #f5e78c,
+    0 0 15px 15px #f5df43,
+    0 0 20px 20px #decb3e,
+    0 0 25px 25px #c1b137;
+  --shadow-blue:
+    0 0 5px 5px #8ac5fc,
+    0 0 15px 15px #02bde7,
+    0 0 20px 20px #04a2c5,
+    0 0 25px 25px #0489a7;
+  --shadow-pink:
+    0 0 5px 5px #fd6ff6,
+    0 0 10px 10px #f80aec,
+    0 0 15px 15px #de0ad3,
+    0 0 20px 20px #cc0ac2,
+    0 0 25px 25px #f710eb;
+  --shadow-fire:
+    0 0 5px 5px #f6e51c,
+    0 0 10px 10px #f6e51c,
+    0 0 15px 15px #e26b05,
+    0 0 20px 20px #cf660b,
+    0 0 25px 25px #cf660b;
+  --shadow-red:
+    0 0 5px 5px rgb(255, 150, 150),
+    0 0 10px 10px rgba(255, 100, 100, .85),
+    0 0 15px 15px rgba(255, 50, 50, .70),
+    0 0 20px 20px rgba(255, 0, 0, .55),
+    0 0 25px 25px rgba(255, 0, 0, .40);
+  --ff-western-text: "Smokum", serif;
+  --ff-western-bold: "Sancreek", serif;
+  --ff-western-hollow: "Ewert";
+  --ff-thin-text: "Nixie One", serif;
+  --ff-western2-bold: "Rye", serif;
+  --ff-curved-bold: "Berkshire Swash", serif;
+  --ff-retro-header: "Audiowide", serif;
+  --ff-heavy-text: "Archivo Black", serif;
+  --ff-norm1-text: "Open Sans", serif;
+  --ff-norm2-text: "Mona Sans", serif;
+  --ff-norm3-text: "Funnel Sans", sans-serif;
+  --ff-boot1-text: "Arimo";
+  --ff-boot2-text: "Work Sans";
+  --ff-boot3-text: "inter";
+  --ff-nav11-text: "Abril Fatface";
+  --ff-header1-text: "Shrikhand";
+  --ff-header2-outlined: "Diplomata";
+
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.dg {
+  display: grid;
+  place-content: center;
+}
+/** to top button */
+#myButton {
+  display: none;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  font-family: var(--ff-heavy-text);
+  border: 2px solid transparent;
+  background-color: var(--bg-black);
+  color: var(--basic-blue1);
+  cursor: pointer;
+  z-index: 99;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  text-transform: capitalize;
+}
+
+#myButton:hover {
+  animation: dizzy .5s linear forwards;
+}
+
+@keyframes dizzy {
+  to {
+    border-color: var(--basic-green1);
+    border-radius: 50%;
+    rotate: 1440deg;
+    box-shadow: var(--shadow-green);
+  }
+}
+
+@keyframes dizzy2 {
+  from {
+    border-color: var(--basic-green1);
+    border-radius: 50%;
+    rotate: 1440deg;
+    box-shadow: var(--shadow-green);
+  }
+
+  to {
+    border-color: transparent;
+    border-radius: 0;
+    rotate: 0deg;
+    box-shadow: none;
+  }
+}

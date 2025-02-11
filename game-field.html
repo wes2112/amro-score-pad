@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amro</title>
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./gamefield.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- ! this is what we are fixing  -->
+  <nav>
+    <button class="nav-btn" id="goBack1"> <i class="fa fa-angle-double-left"></i> back</button>    
+    <a class="nav-btn" href="./index.html">menu</a>
+    <button class="nav-btn" id="toggle">screen toggle</button>
+    <button class="nav-btn" id="goNext1">next <i class="fa fa-angle-double-right"> </i></button>
+    
+  </nav>
+
+  <!-- ^ pop up -->
+  <div class="pop_up" id="pop">
+    <div class="win">
+      <h2 >Winner <span id="winningPlayer"></span></h2>
+      <h3 id="winningScore">0</h3>
+    </div>
+    <div class="loss">
+      <h2 >Opponent <span id="loserName"></span></h2>
+      <h3 id="loserScore">0</h3>
+      <button onclick="resetGame()">Reset Game</button>
+    </div>
+    <button id="closeButton"><i class="fa fa-close"></i></button>
+  </div>
+
+  <!-- ^ game wrapper -->
+  <div class="wrapper">
+
+    <!-- * left side -->
+    <div class="player-a">
+
+      <!-- * name score status -->
+      <div class="players-box" id="box_a">
+        <h2 id="player_one">player one</h2>
+        <h3 id="score_1">000</h3>
+        <h4 id="status1">your break</h4>
+      </div>
+
+      <!--^ btn pad for player 1 -->
+      <!-- *frame 1 -->
+      <div id="set1">
+      <div class="frame" id="frame_a1">
+        <div class="row">
+          <div class="cell"><button id="at1">1</button></div>
+          <div class="cell"><button id="at2">2</button></div>
+          <div class="cell"><button id="at3">3</button></div>
+          <div class="cell"><button id="at4">4</button></div>
+          <div class="cell"><button id="at5">5a</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="at6">6</button></div>
+          <div class="cell"><button id="at7">7</button></div>
+          <div class="cell"><button id="at8">8</button></div>
+          <div class="cell"><button id="at9">9</button></div>
+          <div class="cell"><button id="at10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="at11">11</button></div>
+          <div class="cell"><button id="at12">12</button></div>
+          <div class="cell"><button id="at13">13</button></div>
+          <div class="cell"><button id="at14">14</button></div>
+          <div class="cell"><button id="at15">15</button></div> 
+        </div>
+      </div>
+
+      <!-- *frame 2 -->
+      <div class="frame" id="frame_a2">
+        <div class="row">
+          <div class="cell"><button id="bt1">1</button></div>
+          <div class="cell"><button id="bt2">2</button></div>
+          <div class="cell"><button id="bt3">3</button></div>
+          <div class="cell"><button id="bt4">4</button></div>
+          <div class="cell"><button id="bt5">5b</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="bt6">6</button></div>
+          <div class="cell"><button id="bt7">7</button></div>
+          <div class="cell"><button id="bt8">8</button></div>
+          <div class="cell"><button id="bt9">9</button></div>
+          <div class="cell"><button id="bt10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="bt11">11</button></div>
+          <div class="cell"><button id="bt12">12</button></div>
+          <div class="cell"><button id="bt13">13</button></div>
+          <div class="cell"><button id="bt14">14</button></div>
+          <div class="cell"><button id="bt15">15</button></div>
+        </div>
+      </div>
+      <!-- * frame 3 -->
+      <div class="frame" id="frame_a3">
+        <div class="row">
+          <div class="cell"><button id="ct1">1</button></div>
+          <div class="cell"><button id="ct2">2</button></div>
+          <div class="cell"><button id="ct3">3</button></div>
+          <div class="cell"><button id="ct4">4</button></div>
+          <div class="cell"><button id="ct5">5c</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="ct6">6</button></div>
+          <div class="cell"><button id="ct7">7</button></div>
+          <div class="cell"><button id="ct8">8</button></div>
+          <div class="cell"><button id="ct9">9</button></div>
+          <div class="cell"><button id="ct10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="ct11">11</button></div>
+          <div class="cell"><button id="ct12">12</button></div>
+          <div class="cell"><button id="ct13">13</button></div>
+          <div class="cell"><button id="ct14">14</button></div>
+          <div class="cell"><button id="ct15">15</button></div>
+        </div>
+      </div>
+
+      <!-- * frame 4 -->
+      <div class="frame" id="frame_a4">
+        <div class="row">
+          <div class="cell"><button id="dt1">1</button></div>
+          <div class="cell"><button id="dt2">2</button></div>
+          <div class="cell"><button id="dt3">3</button></div>
+          <div class="cell"><button id="dt4">4</button></div>
+          <div class="cell"><button id="dt5">5d</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="dt6">6</button></div>
+          <div class="cell"><button id="dt7">7</button></div>
+          <div class="cell"><button id="dt8">8</button></div>
+          <div class="cell"><button id="dt9">9</button></div>
+          <div class="cell"><button id="dt10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="dt11">11</button></div>
+          <div class="cell"><button id="dt12">12</button></div>
+          <div class="cell"><button id="dt13">13</button></div>
+          <div class="cell"><button id="dt14">14</button></div>
+          <div class="cell"><button id="dt15">15</button></div>
+        </div>
+      </div>
+      <!-- *frame 5 -->
+      <div class="frame" id="frame_a5">
+        <div class="row">
+          <div class="cell"><button id="et1">1</button></div>
+          <div class="cell"><button id="et2">2</button></div>
+          <div class="cell"><button id="et3">3</button></div>
+          <div class="cell"><button id="et4">4</button></div>
+          <div class="cell"><button id="et5">5e</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="et6">6</button></div>
+          <div class="cell"><button id="et7">7</button></div>
+          <div class="cell"><button id="et8">8</button></div>
+          <div class="cell"><button id="et9">9</button></div>
+          <div class="cell"><button id="et10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="et11">11</button></div>
+          <div class="cell"><button id="et12">12</button></div>
+          <div class="cell"><button id="et13">13</button></div>
+          <div class="cell"><button id="et14">14</button></div>
+          <div class="cell"><button id="et15">15</button></div>
+        </div>
+      </div>
+      <div class="frame" id="frame_a6">
+        <div class="row">
+          <div class="cell"><button id="ft1">1</button></div>
+          <div class="cell"><button id="ft2">2</button></div>
+          <div class="cell"><button id="ft3">3</button></div>
+          <div class="cell"><button id="ft4">4</button></div>
+          <div class="cell"><button id="ft5">5f</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="ft6">6</button></div>
+          <div class="cell"><button id="ft7">7</button></div>
+          <div class="cell"><button id="ft8">8</button></div>
+          <div class="cell"><button id="ft9">9</button></div>
+          <div class="cell"><button id="ft10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="ft11">11</button></div>
+          <div class="cell"><button id="ft12">12</button></div>
+          <div class="cell"><button id="ft13">13</button></div>
+          <div class="cell"><button id="ft14">14</button></div>
+          <div class="cell"><button id="ft15">15</button></div>
+        </div>
+      </div>
+
+      <!-- * frame 7 -->
+      <div class="frame" id="frame_a7">
+        <div class="row">
+          <div class="cell"><button id="gt1">1</button></div>
+          <div class="cell"><button id="gt2">2</button></div>
+          <div class="cell"><button id="gt3">3</button></div>
+          <div class="cell"><button id="gt4">4</button></div>
+          <div class="cell"><button id="gt5">5g</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="gt6">6</button></div>
+          <div class="cell"><button id="gt7">7</button></div>
+          <div class="cell"><button id="gt8">8</button></div>
+          <div class="cell"><button id="gt9">9</button></div>
+          <div class="cell"><button id="gt10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="gt11">11</button></div>
+          <div class="cell"><button id="gt12">12</button></div>
+          <div class="cell"><button id="gt13">13</button></div>
+          <div class="cell"><button id="gt14">14</button></div>
+          <div class="cell"><button id="gt15">15</button></div>
+        </div>
+      </div>
+      <!-- * frame 8 -->
+      <div class="frame" id="frame_a8">
+        <div class="row">
+          <div class="cell"><button id="ht1">1</button></div>
+          <div class="cell"><button id="ht2">2</button></div>
+          <div class="cell"><button id="ht3">3</button></div>
+          <div class="cell"><button id="ht4">4</button></div>
+          <div class="cell"><button id="ht5">5h</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="ht6">6</button></div>
+          <div class="cell"><button id="ht7">7</button></div>
+          <div class="cell"><button id="ht8">8</button></div>
+          <div class="cell"><button id="ht9">9</button></div>
+          <div class="cell"><button id="ht10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="ht11">11</button></div>
+          <div class="cell"><button id="ht12">12</button></div>
+          <div class="cell"><button id="ht13">13</button></div>
+          <div class="cell"><button id="ht14">14</button></div>
+          <div class="cell"><button id="ht15">15</button></div>
+        </div>
+      </div>
+      <!-- * frame 9 -->
+      <div class="frame" id="frame_a9">
+        <div class="row">
+          <div class="cell"><button id="it1">1</button></div>
+          <div class="cell"><button id="it2">2</button></div>
+          <div class="cell"><button id="it3">3</button></div>
+          <div class="cell"><button id="it4">4</button></div>
+          <div class="cell"><button id="it5">5i</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="it6">6</button></div>
+          <div class="cell"><button id="it7">7</button></div>
+          <div class="cell"><button id="it8">8</button></div>
+          <div class="cell"><button id="it9">9</button></div>
+          <div class="cell"><button id="it10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="it11">11</button></div>
+          <div class="cell"><button id="it12">12</button></div>
+          <div class="cell"><button id="it13">13</button></div>
+          <div class="cell"><button id="it14">14</button></div>
+          <div class="cell"><button id="it15">15</button></div>
+        </div>
+      </div>
+      <!-- * frame 10 -->
+      <div class="frame" id="frame_a10">
+        <div class="row">
+          <div class="cell"><button id="jt1">1</button></div>
+          <div class="cell"><button id="jt2">2</button></div>
+          <div class="cell"><button id="jt3">3</button></div>
+          <div class="cell"><button id="jt4">4</button></div>
+          <div class="cell"><button id="jt5">5j</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="jt6">6</button></div>
+          <div class="cell"><button id="jt7">7</button></div>
+          <div class="cell"><button id="jt8">8</button></div>
+          <div class="cell"><button id="jt9">9</button></div>
+          <div class="cell"><button id="jt10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="jt11">11</button></div>
+          <div class="cell"><button id="jt12">12</button></div>
+          <div class="cell"><button id="jt13">13</button></div>
+          <div class="cell"><button id="jt14">14</button></div>
+          <div class="cell"><button id="jt15">15</button></div>
+        </div>
+      </div>
+      <!-- * frame 11 -->
+      <div class="frame" id="frame_a11">
+        <div class="row">
+          <div class="cell"><button id="kt1">1</button></div>
+          <div class="cell"><button id="kt2">2</button></div>
+          <div class="cell"><button id="kt3">3</button></div>
+          <div class="cell"><button id="kt4">4</button></div>
+          <div class="cell"><button id="kt5">5k</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="kt6">6</button></div>
+          <div class="cell"><button id="kt7">7</button></div>
+          <div class="cell"><button id="kt8">8</button></div>
+          <div class="cell"><button id="kt9">9</button></div>
+          <div class="cell"><button id="kt10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="kt11">11</button></div>
+          <div class="cell"><button id="kt12">12</button></div>
+          <div class="cell"><button id="kt13">13</button></div>
+          <div class="cell"><button id="kt14">14</button></div>
+          <div class="cell"><button id="kt15">15</button></div>
+        </div>
+      </div>
+
+      <!-- * frame 12 -->
+      <div class="frame" id="frame_a12">
+        <div class="row">
+          <div class="cell"><button id="lt1">1</button></div>
+          <div class="cell"><button id="lt2">2</button></div>
+          <div class="cell"><button id="lt3">3</button></div>
+          <div class="cell"><button id="lt4">4</button></div>
+          <div class="cell"><button id="lt5">5l</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="lt6">6</button></div>
+          <div class="cell"><button id="lt7">7</button></div>
+          <div class="cell"><button id="lt8">8</button></div>
+          <div class="cell"><button id="lt9">9</button></div>
+          <div class="cell"><button id="lt10">10</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="lt11">11</button></div>
+          <div class="cell"><button id="lt12">12</button></div>
+          <div class="cell"><button id="lt13">13</button></div>
+          <div class="cell"><button id="lt14">14</button></div>
+          <div class="cell"><button id="lt15">15</button></div>
+        </div>
+      </div>
+      </div>     
+      
+    </div>
+
+    <!-- * right side -->
+    <div class="player-b">
+
+      <!-- * name score status -->
+      <div class="players-box" id="box_b">
+        <h2 id="player_two">player two</h2>
+        <h3 id="score_2">000</h3>
+        <h4 id="status2">your break</h4>
+      </div>
+
+      <!-- ^ btn pad for player 2 -->
+      <!-- * frame 1 -->
+      <div id="set2">
+      <div id="frame_b1" class="frame">
+        <div class="row">
+          <div class="cell"><button id="ar1">1</button></div>
+          <div class="cell"><button id="ar2">2</button></div>
+          <div class="cell"><button id="ar3">3</button></div>
+          <div class="cell"><button id="ar4">4</button></div>
+          <div class="cell"><button id="ar5">5a</button></div>
+        </div>
+        <div class="row">    
+          <div class="cell"><button id="ar6">6</button></div>
+          <div class="cell"><button id="ar7">7</button></div>
+          <div class="cell"><button id="ar8">8</button></div>
+          <div class="cell"><button id="ar9">9</button></div>
+          <div class="cell"><button id="ar10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="ar11">11</button></div>
+          <div class="cell"><button id="ar12">12</button></div>
+          <div class="cell"><button id="ar13">13</button></div>
+          <div class="cell"><button id="ar14">14</button></div>
+          <div class="cell"><button id="ar15">15</button></div>
+        </div>
+      </div>
+
+      <!-- * frame 2 -->
+      <div id="frame_b2" class="frame">
+        <div class="row">
+          <div class="cell"><button id="br1">1</button></div>
+          <div class="cell"><button id="br2">2</button></div>
+          <div class="cell"><button id="br3">3</button></div>
+          <div class="cell"><button id="br4">4</button></div>
+          <div class="cell"><button id="br5">5b</button></div>
+        </div>
+        <div class="row">
+          <div class="cell"><button id="br6">6</button></div>
+          <div class="cell"><button id="br7">7</button></div>
+          <div class="cell"><button id="br8">8</button></div>
+          <div class="cell"><button id="br9">9</button></div>
+          <div class="cell"><button id="br10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="br11">11</button></div>
+          <div class="cell"><button id="br12">12</button></div>
+          <div class="cell"><button id="br13">13</button></div>
+          <div class="cell"><button id="br14">14</button></div>
+          <div class="cell"><button id="br15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 3 -->
+      <div id="frame_b3" class="frame">
+        <div class="row">
+          <div class="cell"><button id="cr1">1</button></div>
+          <div class="cell"><button id="cr2">2</button></div>
+          <div class="cell"><button id="cr3">3</button></div>
+          <div class="cell"><button id="cr4">4</button></div>
+          <div class="cell"><button id="cr5">5c</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="cr6">6</button></div>
+          <div class="cell"><button id="cr7">7</button></div>
+          <div class="cell"><button id="cr8">8</button></div>
+          <div class="cell"><button id="cr9">9</button></div>
+          <div class="cell"><button id="cr10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="cr11">11</button></div>
+          <div class="cell"><button id="cr12">12</button></div>
+          <div class="cell"><button id="cr13">13</button></div>
+          <div class="cell"><button id="cr14">14</button></div>
+          <div class="cell"><button id="cr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 4 -->
+      <div id="frame_b4" class="frame">
+        <div class="row">
+          <div class="cell"><button id="dr1">1</button></div>
+          <div class="cell"><button id="dr2">2</button></div>
+          <div class="cell"><button id="dr3">3</button></div>
+          <div class="cell"><button id="dr4">4</button></div>
+          <div class="cell"><button id="dr5">5d</button></div>
+        </div>
+        <div class="row">  
+          <div class="cell"><button id="dr6">6</button></div>
+          <div class="cell"><button id="dr7">7</button></div>
+          <div class="cell"><button id="dr8">8</button></div>
+          <div class="cell"><button id="dr9">9</button></div>
+          <div class="cell"><button id="dr10">10</button></div>
+        </div>
+        <div class="row"> 
+          <div class="cell"><button id="dr11">11</button></div>
+          <div class="cell"><button id="dr12">12</button></div>
+          <div class="cell"><button id="dr13">13</button></div>
+          <div class="cell"><button id="dr14">14</button></div>
+          <div class="cell"><button id="dr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 5 -->
+      <div id="frame_b5" class="frame">
+        <div class="row">
+          <div class="cell"><button id="er1">1</button></div>
+          <div class="cell"><button id="er2">2</button></div>
+          <div class="cell"><button id="er3">3</button></div>
+          <div class="cell"><button id="er4">4</button></div>
+          <div class="cell"><button id="er5">5e</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="er6">6</button></div>
+          <div class="cell"><button id="er7">7</button></div>
+          <div class="cell"><button id="er8">8</button></div>
+          <div class="cell"><button id="er9">9</button></div>
+          <div class="cell"><button id="er10">10</button></div>
+        </div> 
+        <div class="row"> 
+          <div class="cell"><button id="er11">11</button></div>
+          <div class="cell"><button id="er12">12</button></div>
+          <div class="cell"><button id="er13">13</button></div>
+          <div class="cell"><button id="er14">14</button></div>
+          <div class="cell"><button id="er15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 6 -->
+      <div id="frame_b6" class="frame">
+        <div class="row">
+          <div class="cell"><button id="fr1">1</button></div>
+          <div class="cell"><button id="fr2">2</button></div>
+          <div class="cell"><button id="fr3">3</button></div>
+          <div class="cell"><button id="fr4">4</button></div>
+          <div class="cell"><button id="fr5">5f</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="fr6">6</button></div>
+          <div class="cell"><button id="fr7">7</button></div>
+          <div class="cell"><button id="fr8">8</button></div>
+          <div class="cell"><button id="fr9">9</button></div>
+          <div class="cell"><button id="fr10">10</button></div>
+        </div> 
+        <div class="row"> 
+          <div class="cell"><button id="fr11">11</button></div>
+          <div class="cell"><button id="fr12">12</button></div>
+          <div class="cell"><button id="fr13">13</button></div>
+          <div class="cell"><button id="fr14">14</button></div>
+          <div class="cell"><button id="fr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 7 -->
+      <div class="frame" id="frame_b7">
+        <div class="row">
+          <div class="cell"><button id="gr1">1</button></div>
+          <div class="cell"><button id="gr2">2</button></div>
+          <div class="cell"><button id="gr3">3</button></div>
+          <div class="cell"><button id="gr4">4</button></div>
+          <div class="cell"><button id="gr5">5g</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="gr6">6</button></div>
+          <div class="cell"><button id="gr7">7</button></div>
+          <div class="cell"><button id="gr8">8</button></div>
+          <div class="cell"><button id="gr9">9</button></div>
+          <div class="cell"><button id="gr10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="gr11">11</button></div>
+          <div class="cell"><button id="gr12">12</button></div>
+          <div class="cell"><button id="gr13">13</button></div>
+          <div class="cell"><button id="gr14">14</button></div>
+          <div class="cell"><button id="gr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 8 -->
+      <div class="frame" id="frame_b8">
+        <div class="row">
+          <div class="cell"><button id="hr1">1</button></div>
+          <div class="cell"><button id="hr2">2</button></div>
+          <div class="cell"><button id="hr3">3</button></div>
+          <div class="cell"><button id="hr4">4</button></div>
+          <div class="cell"><button id="hr5">5h</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="hr6">6</button></div>
+          <div class="cell"><button id="hr7">7</button></div>
+          <div class="cell"><button id="hr8">8</button></div>
+          <div class="cell"><button id="hr9">9</button></div>
+          <div class="cell"><button id="hr10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="hr11">11</button></div>
+          <div class="cell"><button id="hr12">12</button></div>
+          <div class="cell"><button id="hr13">13</button></div>
+          <div class="cell"><button id="hr14">14</button></div>
+          <div class="cell"><button id="hr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 9 -->
+      <div class="frame" id="frame_b9">
+        <div class="row">
+          <div class="cell"><button id="ir1">1</button></div>
+          <div class="cell"><button id="ir2">2</button></div>
+          <div class="cell"><button id="ir3">3</button></div>
+          <div class="cell"><button id="ir4">4</button></div>
+          <div class="cell"><button id="ir5">5i</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="ir6">6</button></div>
+          <div class="cell"><button id="ir7">7</button></div>
+          <div class="cell"><button id="ir8">8</button></div>
+          <div class="cell"><button id="ir9">9</button></div>
+          <div class="cell"><button id="ir10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="ir11">11</button></div>
+          <div class="cell"><button id="ir12">12</button></div>
+          <div class="cell"><button id="ir13">13</button></div>
+          <div class="cell"><button id="ir14">14</button></div>
+          <div class="cell"><button id="ir15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 10 -->
+      <div class="frame" id="frame_b10">
+        <div class="row">
+          <div class="cell"><button id="jr1">1</button></div>
+          <div class="cell"><button id="jr2">2</button></div>
+          <div class="cell"><button id="jr3">3</button></div>
+          <div class="cell"><button id="jr4">4</button></div>
+          <div class="cell"><button id="jr5">5j</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="jr6">6</button></div>
+          <div class="cell"><button id="jr7">7</button></div>
+          <div class="cell"><button id="jr8">8</button></div>
+          <div class="cell"><button id="jr9">9</button></div>
+          <div class="cell"><button id="jr10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="jr11">11</button></div>
+          <div class="cell"><button id="jr12">12</button></div>
+          <div class="cell"><button id="jr13">13</button></div>
+          <div class="cell"><button id="jr14">14</button></div>
+          <div class="cell"><button id="jr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 11 -->
+      <div class="frame" id="frame_b11">
+        <div class="row">
+          <div class="cell"><button id="kr1">1</button></div>
+          <div class="cell"><button id="kr2">2</button></div>
+          <div class="cell"><button id="kr3">3</button></div>
+          <div class="cell"><button id="kr4">4</button></div>
+          <div class="cell"><button id="kr5">5k</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="kr6">6</button></div>
+          <div class="cell"><button id="kr7">7</button></div>
+          <div class="cell"><button id="kr8">8</button></div>
+          <div class="cell"><button id="kr9">9</button></div>
+          <div class="cell"><button id="kr10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="kr11">11</button></div>
+          <div class="cell"><button id="kr12">12</button></div>
+          <div class="cell"><button id="kr13">13</button></div>
+          <div class="cell"><button id="kr14">14</button></div>
+          <div class="cell"><button id="kr15">15</button></div>
+        </div>  
+      </div>
+
+      <!-- * frame 12 -->
+      <div class="frame" id="frame_b12">
+        <div class="row">
+          <div class="cell"><button id="lr1">1</button></div>
+          <div class="cell"><button id="lr2">2</button></div>
+          <div class="cell"><button id="lr3">3</button></div>
+          <div class="cell"><button id="lr4">4</button></div>
+          <div class="cell"><button id="lr5">5l</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="lr6">6</button></div>
+          <div class="cell"><button id="lr7">7</button></div>
+          <div class="cell"><button id="lr8">8</button></div>
+          <div class="cell"><button id="lr9">9</button></div>
+          <div class="cell"><button id="lr10">10</button></div>
+        </div>  
+        <div class="row">
+          <div class="cell"><button id="lr11">11</button></div>
+          <div class="cell"><button id="lr12">12</button></div>
+          <div class="cell"><button id="lr13">13</button></div>
+          <div class="cell"><button id="lr14">14</button></div>
+          <div class="cell"><button id="lr15">15</button></div>
+        </div>  
+      </div>
+    </div>
+    </div>
+
+  </div>
+  <!-- <script src="./score.js"></script> -->
+  <script>
+    // Retrieve names from session storage
+    const player1 = sessionStorage.getItem('storedName1');
+    const player2 = sessionStorage.getItem('storedName2');
+
+    // Display the names on the page
+    document.getElementById("player_one").innerHTML = `Player 1: ${player1}`;
+    document.getElementById("player_two").innerHTML = `Player 2: ${player2}`;
+  </script>
+  <script src="./name_handler.js"></script>
+  <script src="./test1.js"></script>
+  <script src="./toggle.js"></script>
+</body>
+</html>

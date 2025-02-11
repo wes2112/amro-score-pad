@@ -1,0 +1,610 @@
+body {
+  background: no-repeat linear-gradient(20deg,
+      var(--blue-level3),
+      var(--basic-purple9));
+  height: 100vh;
+}
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* * frame settings */
+/* ! handled by javascript. turned off */
+#frame_a1,
+#frame_b1 {
+  /* display: block; */
+}
+#frame_a2, #frame_a3, #frame_a4, #frame_a5, #frame_a6,
+#frame_a7, #frame_a8, #frame_a9, #frame_a10, #frame_a11,
+#frame_a12, #frame_b2, #frame_b3, #frame_b4, #frame_b5,
+#frame_b6, #frame_b7, #frame_b8, #frame_b9, #frame_b10,
+#frame_b11, #frame_b12 {
+  /* display: none; */
+}
+#pop {
+  display: none;
+}
+
+/** nav bar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--blue-level8);
+  border-bottom: 2px solid var(--basic-green3);
+}
+
+/** nav bar buttons */
+.nav-btn {
+  background-color: var(--basic-red1);
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 15%;
+  border: hidden;
+  text-decoration: none;
+  color: #000;
+}
+#goNext1 {
+  display: block;
+  background-color: var(--basic-green3);
+}
+#goNext2, #goNext3, #goNext4, #goNext5, #goNext6,
+#goNext7, #goNext8, #goNext9, #goNext10, #goNext11,
+#goNext12, #goBack1, #goBack2, #goBack3, #goBack4,
+#goBack5, #goBack6, #goBack7, #goBack8, #goBack9,
+#goBack10, #goBack11 {
+  display: none;
+  background-color: var(--basic-green3);
+}
+/** for game pad buttons */
+#at1, #at2, #at3, #at4, #at5, #at6, #at7, #at8, #at9, #at10,
+#at11, #at12, #at13, #at14, #at15, #ar1, #ar2, #ar3, #ar4,
+#ar5, #ar6, #ar7, #ar8, #ar9, #ar10, #ar11, #ar12, #ar13,
+#ar14, #ar15, #bt1, #bt2, #bt3, #bt4, #bt5, #bt6, #bt7, #bt8,
+#bt9, #bt10, #bt11, #bt12, #bt13, #bt14, #bt15, #br1, #br2,
+#br3, #br4, #br5, #br6, #br7, #br8, #br9, #br10, #br11, #br12,
+#br13, #br14, #br15, #ct1, #ct2, #ct3, #ct4, #ct5, #ct6, #ct7,
+#ct8, #ct9, #ct10, #ct11, #ct12, #ct13, #ct14, #ct15, #cr1,
+#cr2, #cr3, #cr4, #cr5, #cr6, #cr7, #cr8, #cr9, #cr10, #cr11,
+#cr12, #cr13, #cr14, #cr15, #dt1, #dt2, #dt3, #dt4, #dt5, #dt6,
+#dt7, #dt8, #dt9, #dt10, #dt11, #dt12, #dt13, #dt14, #dt15, #dr1,
+#dr2, #dr3, #dr4, #dr5, #dr6, #dr7, #dr8, #dr9, #dr10, #dr11,
+#dr12, #dr13, #dr14, #dr15, #et1, #et2, #et3, #et4, #et5, #et6,
+#et7, #et8, #et9, #et10, #et11, #et12, #et13, #et14, #et15,
+#er1, #er2, #er3, #er4, #er5, #er6, #er7, #er8, #er9, #er10,
+#er11, #er12, #er13, #er14, #er15, #ft1, #ft2, #ft3, #ft4, #ft5,
+#ft6, #ft7, #ft8, #ft9, #ft10, #ft11, #ft12, #ft13, #ft14, #ft15,
+#fr1, #fr2, #fr3, #fr4, #fr5, #fr6, #fr7, #fr8, #fr9, #fr10,
+#fr11, #fr12, #fr13, #fr14, #fr15, #gt1, #gt2, #gt3, #gt4, #gt5,
+#gt6, #gt7, #gt8, #gt9, #gt10, #gt11, #gt12, #gt13, #gt14, #gt15,
+#gr1, #gr2, #gr3, #gr4, #gr5, #gr6, #gr7, #gr8, #gr9, #gr10, 
+#gr11, #gr12, #gr13, #gr14, #gr15, #ht1, #ht2, #ht3, #ht4, #ht5,
+#ht6, #ht7, #ht8, #ht9, #ht10, #ht11, #ht12, #ht13, #ht14, #ht15,
+#hr1, #hr2, #hr3, #hr4, #hr5, #hr6, #hr7, #hr8, #hr9, #hr10,
+#hr11, #hr12, #hr13, #hr14, #hr15, #it1, #it2, #it3, #it4, #it5,
+#it6, #it7, #it8, #it9, #it10, #it11, #it12, #it13, #it14, #it15,
+#ir1, #ir2, #ir3, #ir4, #ir5, #ir6, #ir7, #ir8, #ir9, #ir10,
+#ir11, #ir12, #ir13, #ir14, #ir15, #jt1, #jt2, #jt3, #jt4, #jt5,
+#jt6, #jt7, #jt8, #jt9, #jt10, #jt11, #jt12, #jt13, #jt14, #jt15,
+#jr1, #jr2, #jr3, #jr4, #jr5, #jr6, #jr7, #jr8, #jr9, #jr10,
+#jr11, #jr12, #jr13, #jr14, #jr15, #kt1, #kt2, #kt3, #kt4, #kt5,
+#kt6, #kt7, #kt8, #kt9, #kt10, #kt11, #kt12, #kt13, #kt14, #kt15,
+#kr1, #kr2, #kr3, #kr4, #kr5, #kr6, #kr7, #kr8, #kr9, #kr10,
+#kr11, #kr12, #kr13, #kr14, #kr15, #lt1, #lt2, #lt3, #lt4, #lt5,
+#lt6, #lt7, #lt8, #lt9, #lt10, #lt11, #lt12, #lt13, #lt14, #lt15,
+#lr1, #lr2, #lr3, #lr4, #lr5, #lr6, #lr7, #lr8, #lr9, #lr10,
+#lr11, #lr12, #lr13, #lr14, #lr15 { display: block;}
+
+/** for script */
+.hidden {
+  display: none;
+}
+.hide {
+  visibility: hidden;
+}
+
+/** pop up modal for end game */
+.pop_up {
+  position: absolute;
+  background-color: #000000d0;
+  color: var(--basic-green1);
+  text-align: center;
+  text-transform: capitalize;
+}
+.pop_up button {
+  background-color: var(--basic-red2);
+  border: 3px solid var(--basic-yellow1);
+  border-radius: 5px;
+}
+.win {
+  border: 3px solid transparent;
+  border-radius: 10px;
+  animation: declare 4s ease-in-out infinite;
+}
+@keyframes declare {
+  0% {
+    border-color: var(--orange-level1);
+  }
+  25% {
+    border-color: var(--basic-green3);
+  }
+  50% {
+    border-color: var(--basic-red9);
+  }
+  75% {
+    border-color: var(--basic-yellow1);
+  }
+  100% {
+    border-color: var(--orange-level1);
+  }
+}
+.loss button {
+  background-color: var(--basic-green2);
+  font-weight: 600;
+  border-radius: 25px;
+  border: 4px solid red;
+}
+.pop_up button:active {
+  background-color: var(--blue-level6);
+  color: aliceblue;
+}
+
+/** players box  */
+.players-box {
+  background-color: #000;
+  color: var(--basic-water);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+/** players container */
+.player-b,
+.player-a {
+  width: 100%;
+}
+/**game pad */
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.frame {
+  background-color: #000;
+  border: 3px solid var(--basic-green3);
+}
+.cell {
+  border: 3px solid red;
+}
+.cell button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 400px) {
+  body {
+    overflow: hidden;
+  }
+  /** pop up modal */
+  .pop_up {
+    width: 80%;
+    top: 150px;
+    left: 50%;
+    translate: -50%;
+    padding: 1rem;
+    border: 5px solid var(--basic-water);
+  }
+  .pop_up h2, .pop_up h3 {
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    display: block;
+  }
+  .loss button {
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    margin: 1rem;
+  }
+  .pop_up button {
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    margin: 1rem;
+  }
+  /** nav bar */
+  nav {
+    padding: 0.2rem;
+  }
+  .nav-btn {
+    padding: 0.1rem 1rem;
+  }
+  /** wrapper  */
+  .wrapper {
+    margin: 0.5rem;
+  }
+  .player-a {
+    width: 100%;
+  }
+  /** players box */
+  .players-box {
+    margin: 0.5rem;
+  }
+  .players-box h2 {
+    padding: 0.3rem;
+    font-size: 2rem;
+  }
+  .players-box h3 {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .players-box h4 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  #box_b,
+  #box_a {
+    border: 3px solid var(--basic-green3);
+  }
+  /**frame settings */
+  .frame {
+    margin: 0.5rem;        
+    padding: .5rem;
+  }  
+  .row {
+    gap: .5rem;
+    margin: .5rem 0;
+  }
+  .cell {
+    border: 1px solid red;
+    max-width: 70px;
+    min-width: 60px;
+    height: 70px;
+    padding: 0.5rem;
+    flex-grow: 1;
+  }
+  .cell button {
+    font-size: 3rem;
+  }
+  
+  
+}
+@media screen and (min-width: 401px) and (max-width: 750px) {
+  /** nav bar */
+  body {
+    overflow: hidden;
+  }
+   /** pop up modal */
+  .pop_up {
+    width: 60%;
+    top: 50px;
+    left: 50%;
+    translate: -50%;
+    padding: 1rem;
+    border: 5px solid var(--basic-water);
+  }
+  .pop_up h2, .pop_up h3 {
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    display: block;
+  }
+  .loss button {
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    margin: 1rem;
+  }
+  .pop_up button {
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    margin: 1rem;
+  }
+  nav {
+    padding: .1rem;
+  }
+  .nav-btn {
+    padding: .1rem 1rem;
+    font-size: 1.3rem;
+  }
+  /** wrapper */
+  .wrapper {
+    margin: 0.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .player-b,
+  .player-a {
+    width: 100%;
+  }
+  /** players box */
+  .players-box {
+    margin: 0.5rem;
+  }
+  .players-box h2 {
+    font-size: 2rem;
+    padding: 0.3rem;
+  }
+  .players-box h3 {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .players-box h4 {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  #box_b,
+  #box_a {
+    border: 3px solid var(--basic-green3);
+  }
+  /**frame settings */
+  .frame {
+    margin: 0.5rem;        
+    padding: .5rem;
+  }  
+  .row {
+    gap: 0.3rem;
+    margin: 0.3rem 0;
+  }
+  .cell {
+    border: 1px solid red;
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+  }
+  .cell button {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1250px) {
+  /** pop up modal */
+    .pop_up {
+      width: 50%;
+      top: 150px;
+      left: 50%;
+      translate: -50%;
+      padding: 1rem;
+      border: 5px solid var(--basic-water);
+    }
+  
+    .pop_up h2,
+    .pop_up h3 {
+      font-size: 2rem;
+      padding: .5rem 1rem;
+      display: block;
+    }
+  
+    .loss button {
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+    }
+  
+    .pop_up button {
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+    }
+  /** nav bar */
+
+  nav {
+    padding: 1rem;
+  }
+  .nav-btn {
+    padding: .5rem 1rem;
+    font-size: 2rem;
+  }
+  /** wrapper */
+  .wrapper {
+    margin: 1rem;
+    display: flex;
+    gap: 2rem;
+  }
+  /** players box */
+  .players-box {
+    margin: 0.5rem;    
+  }
+  .players-box h2 {
+    font-size: 2.2rem;
+    padding: 0.5rem;
+  }
+  .players-box h3 {
+    padding: 0.5rem;
+    font-size: 2.2rem;
+  }
+  .players-box h4 {
+    padding: 0.3rem;
+    font-size: 2rem;
+  }
+  #box_b,
+  #box_a {
+    border: 3px solid var(--basic-green3);
+  }
+  /**frame settings */
+  .frame {
+    margin: .5rem;        
+    padding: .5rem;
+  }  
+  .row {
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+  }
+  .cell {
+    border: 2px solid red;
+    max-width: 19%;
+    aspect-ratio: 1/1;
+    padding: 0.7rem;
+    flex-grow: 1;
+  }
+  .cell button {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1251px) and (max-width: 1950px) {
+  /** pop up modal */
+    .pop_up {
+      width: 40%;
+      top: 150px;
+      left: 50%;
+      translate: -50%;
+      padding: 1rem;
+      border: 5px solid var(--basic-water);
+    }
+  
+    .pop_up h2,
+    .pop_up h3 {
+      font-size: 2rem;
+      padding: .5rem 1rem;
+      display: block;
+    }
+  
+    .loss button {
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+    }
+  
+    .pop_up button {
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+    }
+  /** nav bar */
+  nav {
+    padding: .5rem 1.5rem;
+  }
+  .nav-btn {
+    padding: .5rem 1.5rem;
+    font-size: 2.2rem;
+  }
+  /** wrapper */
+  .wrapper {
+    margin: 1.5rem;
+    display: flex;
+    gap: 3rem;
+  }
+  /** players box */
+  .players-box {
+    margin: 0.5rem;
+  }
+  .players-box h2 {
+    font-size: 2.4rem;
+    padding: 0.6rem;
+  }
+  .players-box h3 {
+    padding: 0.8rem;
+    font-size: 2.5rem;
+  }
+  .players-box h4 {
+    font-size: 2.2rem;
+    padding: 0.6rem;
+  }
+  #box_b,
+  #box_a {
+    border: 3px solid var(--basic-green3);
+  }
+  /**frame settings */
+  .frame {
+    margin: .5rem;        
+    padding: .5rem;
+  }  
+  .row {
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+  }
+  .cell {
+    border: 2px solid red;
+    max-width: 19%;
+    aspect-ratio: 1/1;
+    padding: 0.7rem;
+    flex-grow: 1;
+  }
+  .cell button {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1951px) and (max-width: 4000px) {
+  /** pop up modal */
+    .pop_up {
+      width: 40%;
+      top: 250px;
+      left: 50%;
+      translate: -50%;
+      padding: 1rem;
+      border: 5px solid var(--basic-water);
+    }
+  
+    .pop_up h2,
+    .pop_up h3 {
+      font-size: 2rem;
+      padding: .5rem 1rem;
+      display: block;
+    }
+  
+    .loss button {
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+    }
+  
+    .pop_up button {
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+      margin: 1rem;
+    }
+  /** nav bar */
+  nav {
+    padding: 1rem;
+  }
+  .nav-btn {
+    padding: .5rem 2rem;
+    font-size: 2.5rem;
+  }
+  /** wrapper */
+  .wrapper {
+    margin: 2rem;
+    display: flex;
+    gap: 4rem;
+  }
+  /** players box */
+  .players-box {
+    margin: 0.5rem;
+  }
+  .players-box h2 {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .players-box h3 {
+    padding: 1rem;
+    font-size: 3rem;
+  }
+  .players-box h4 {
+    padding: 1rem;
+    font-size: 2.5rem;
+  }
+  #box_b,
+  #box_a {
+    border: 3px solid var(--basic-green3);
+  }
+  /**frame settings */
+  .frame {
+    margin: .5rem;        
+    padding: .5rem;
+  }  
+  .row {
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+  }
+  .cell {
+    border: 2px solid red;
+    max-width: 19%;
+    aspect-ratio: 1/1;
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  .cell button {
+    font-size: 5rem;
+  }
+}
+#status2 {
+  color: #000;
+}
+#status1 {
+  color: #00ffff;
+}
